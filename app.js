@@ -1,4 +1,6 @@
+//Variables
 var url;
+var mapsUrl;
 var button_click = document.getElementById('ip-button-submit');
 var form = document.getElementById('form');
 var ipAdress
@@ -8,6 +10,10 @@ var ipResult = document.getElementById('ip-result');
 var timezone = document.getElementById('timezone');
 var isp = document.getElementById('isp');
 
+//map
+var map;
+
+//Ip + URL.
 function urlNewIp(){
     /*Para que o alor seja atualizado sempre que tenha um novo input text. É necessaário que a váriavel ip adress pegue seu valor nessa função! */
     ipAdress = document.getElementById('ip-adress').value;
@@ -15,7 +21,20 @@ function urlNewIp(){
     return url;
 }
 
-function api_consume(newUrl){
+//Google map API consume.
+function initMap(resp) {
+    map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 8,
+      center: {
+          lat:resp.location.lat,
+          lng:resp.location.lng,
+      }
+    });
+}
+
+
+//Geographic API consume.
+function ip_api_consume(newUrl){
     var country;
     var city;
     var timezone_res;
@@ -36,12 +55,14 @@ function api_consume(newUrl){
         local.innerHTML = city + " - " + country;
         timezone.innerHTML = timezone_res;
         isp.innerHTML = isp_res;
+        //map.
+        initMap(response);
     })
 
 }
 
-
+//IP search.
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
-    api_consume(urlNewIp());
+    ip_api_consume(urlNewIp());
 })
