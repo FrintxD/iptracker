@@ -84,7 +84,7 @@ form{
 
     margin-top:-17.566502463vh;
 
-    z-index:21;
+    z-index:20;
 
     border-radius:4vw;
     margin-inline: auto;
@@ -123,4 +123,95 @@ form{
     margin-top:-19vh;
 
     z-index:-1;
+}
+
+
+@media (min-width:400px){
+    .first-container{
+        height: 19.485294118vw;
+    }
+
+    #title{
+        font-size: 2.4vw;
+        margin-top:1.81773399vw;
+        margin-bottom: -1vw;
+    }
+
+    form{
+        height: 4.117647059vw;
+        margin-top: 2.187192118vw;
+    }
+
+    #ip-adress{
+        width:34.411764706vw;
+        height: 100%;
+
+        border-radius: 1.3vw 0 0 1.3vw;
+
+        font-size:2vw;
+
+        padding-left:2vw;
+    }
+    /*Button*/
+    #ip-button-submit{
+        width:3.970588235vw;
+        height: 100%;
+
+        border-radius: 0 1.3vw 1.3vw 0;
+    }
+    #ip-button-submit img{
+        width:0.970588235vw;
+    }
+
+    /*Information-container*/
+    .information-container{
+        flex-direction: row;
+        justify-content: center;
+
+        width:76.764705882vw;
+        height: 11.397058824vw;
+
+        margin-top:-6vw;
+
+        border-radius:1vw;
+
+    }
+    .result-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        width:11.617647059vw;
+        height:6.029411765vw;
+
+        margin-top:0;
+        margin-right: 5vw;
+    }
+
+    .ip-result{
+        margin-left:8.5vw;
+    }
+
+    .sub-information{
+        font-size: 1vw;
+
+        margin-bottom: 2%;
+    }
+    .result-information{
+        font-size: 2vw;
+    }
+    /*MAp*/
+    #map{
+        position: relative;
+
+        width: 100%;
+        height: 36.323529412vw;
+
+        margin-top:-6vw;
+
+        z-index:-1;
+
+        background-color:black;
+    }
 }
