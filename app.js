@@ -1,0 +1,47 @@
+var url;
+var button_click = document.getElementById('ip-button-submit');
+var form = document.getElementById('form');
+var ipAdress
+//Informations response.
+var local = document.getElementById('location');
+var ipResult = document.getElementById('ip-result');
+var timezone = document.getElementById('timezone');
+var isp = document.getElementById('isp');
+
+function urlNewIp(){
+    /*Para que o alor seja atualizado sempre que tenha um novo input text. É necessaário que a váriavel ip adress pegue seu valor nessa função! */
+    ipAdress = document.getElementById('ip-adress').value;
+    url = "https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_IwKAZzhSbt0kQRYMknL2EWDcaEhbf&ipAddress=" + ipAdress;
+    return url;
+}
+
+function api_consume(newUrl){
+    var country;
+    var city;
+    var timezone_res;
+    var isp_res;
+
+    var init = {
+        method:"GET",
+    }
+    var http = fetch(url, init).then(function(data){
+        return data.json();
+    }).then((response)=>{
+        country = response.location.country;
+        city = response.location.city;
+        timezone_res = response.location.timezone;
+        isp_res = response.isp;
+        //Inner Html information.
+        ipResult.innerHTML = ipAdress;
+        local.innerHTML = city + " - " + country;
+        timezone.innerHTML = timezone_res;
+        isp.innerHTML = isp_res;
+    })
+
+}
+
+
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    api_consume(urlNewIp());
+})

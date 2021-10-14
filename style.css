@@ -59,7 +59,7 @@ form{
     outline: none;
 }
 /*Button*/
-button{
+#ip-button-submit{
     width:15.4666667%;
     height: 100%;
 
