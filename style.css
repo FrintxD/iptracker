@@ -20,7 +20,7 @@
 }
 /*Background image*/
 .first-container{
-    background-image: url('./images/pattern-bg.png');
+    background-image: url('images/pattern-bg.png');
     background-size: cover;
 
     z-index:19;
@@ -77,18 +77,18 @@ form{
     align-items: center;
     flex-direction: column;
 
-    position: absolute;
-
     width:86.2%;
     height: 36.083743842vh;
 
     background-color:#ffffff;
 
-    margin-top:20.566502463vh;
+    margin-top:-17.566502463vh;
 
-    z-index:20;
+    z-index:21;
 
     border-radius:4vw;
+    margin-inline: auto;
+
 }
 
 .result-container{
@@ -97,7 +97,7 @@ form{
 
     align-items: center;
 
-    margin-top:4%;
+    margin-top:7.6%;
 }
 
 .sub-information{
@@ -110,12 +110,17 @@ form{
 .result-information{
     color:#000000;
 
-    font-size: 8vw;
+    font-size: 6vw;
     font-weight: 300;
 }
 
 /*MAp*/
 #map{
+
     width: 100%;
-    height: 50vh;
+    height: 62vh;
+
+    margin-top:-19vh;
+
+    z-index:-1;
 }
