@@ -203,13 +203,11 @@ form{
     }
     /*MAp*/
     #map{
-        position: relative;
+        position: absolute;
 
         width: 100%;
-        height: 36.323529412vw;
+        height: 100%;
 
         margin-top:-6vw;
-
-        z-index:-1;
     }
 }
