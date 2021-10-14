@@ -17,7 +17,7 @@ var map;
 function urlNewIp(){
     /*Para que o alor seja atualizado sempre que tenha um novo input text. É necessaário que a váriavel ip adress pegue seu valor nessa função! */
     ipAdress = document.getElementById('ip-adress').value;
-    url = "https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_IwKAZzhSbt0kQRYMknL2EWDcaEhbf&ipAddress=" + ipAdress;
+    url = "https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_5XxBUSKU20isJKk8Ws16BnrKKGqLC&ipAddress=" + ipAdress;
     return url;
 }
 
