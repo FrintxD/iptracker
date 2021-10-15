@@ -4,6 +4,7 @@ var mapsUrl;
 var button_click = document.getElementById('ip-button-submit');
 var form = document.getElementById('form');
 var ipAdress
+var initalmap = document.getElementById('initalmap');
 //Informations response.
 var local = document.getElementById('location');
 var ipResult = document.getElementById('ip-result');
@@ -15,7 +16,7 @@ var map;
 
 //Ip + URL.
 function urlNewIp(){
-    /*Para que o alor seja atualizado sempre que tenha um novo input text. É necessaário que a váriavel ip adress pegue seu valor nessa função! */
+    /*Para que o valor seja atualizado sempre que tenha um novo input text. É necessaário que a váriavel ip adress pegue seu valor nessa função! */
     ipAdress = document.getElementById('ip-adress').value;
     url = "https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_5XxBUSKU20isJKk8Ws16BnrKKGqLC&ipAddress=" + ipAdress;
     return url;
@@ -64,5 +65,6 @@ function ip_api_consume(newUrl){
 //IP search.
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
+    initalmap.style.display = 'none';
     ip_api_consume(urlNewIp());
 })

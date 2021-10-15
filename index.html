@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--Website By Matheus Ribeiro - Front End Mentor-->
     <title>IPTRACKER - FrontEndMentor</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
             <h1 id="title">IP Adress Tracker</h1>
             <!--Number input + button-->
             <form id="form">
-                <input type="text" name="ipadress" id="ip-adress" value="8.8.8.8">
+                <input type="text" name="ipadress" id="ip-adress" value="" placeholder="Search for any IP address or domain">
                 <button type="submit" id="ip-button-submit"><img src="images/icon-arrow.svg" alt=""></button>
             </form>
         </div>
@@ -25,24 +26,26 @@
         <div class="information-container">
             <div class="ip-result result-container">
                 <h2 class="sub-information">IP ADDRESS</h2>
-                <h1 class="result-information" id="ip-result">192.168.1.1</h1>
+                <h1 class="result-information" id="ip-result">8.8.8.8</h1>
             </div>
-            <div class="location result-container">
+            <div class="location result-container line">
                 <h2 class="sub-information">LOCATION</h2>
-                <h1 class="result-information" id="location">Broklyn</h1>
+                <h1 class="result-information" id="location">Mountain View</h1>
             </div>
-            <div class="timezone result-container">
+            <div class="timezone result-container line">
                 <h2 class="sub-information">TIMEZONE</h2>
-                <h1 class="result-information" id="timezone">UTX-5:00</h1>
+                <h1 class="result-information" id="timezone">-7:00</h1>
             </div>
-            <div class="isp result-container">
+            <div class="isp result-container line">
                 <h2 class="sub-information">ISP</h2>
-                <h1 class="result-information" id="isp">SpaceX Starlink</h1>
+                <h1 class="result-information" id="isp">Google LLC</h1>
             </div>
         </div>
-        <div id="map" class="map"></div>
+        <div id="map" class="map">
+            <iframe id="initalmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101408.03263041271!2d-122.15130778677039!3d37.41345079257384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb7495bec0189%3A0x7c17d44a466baf9b!2sMountain%20View%2C%20CA%2C%20EUA!5e0!3m2!1spt-BR!2sbr!4v1634299334568!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
         <!--Google API-->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfRh90gF8Q7mHUFIIL2MyPFsmWEOa48vg&callback=initMap"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfRh90gF8Q7mHUFIIL2MyPFsmWEOa48vg&callback=initMap"></script>>
         <!--My Script-->
         <script src="app.js"></script>
     </main>
