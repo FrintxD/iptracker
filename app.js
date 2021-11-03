@@ -15,7 +15,7 @@ var map;
 function geoAPIvalidUrl(){
     /*Para que o valor seja atualizado sempre que tenha um novo input text. É necessaário que a váriavel ip adress pegue seu valor nessa função! */
     var ipAdress = document.getElementById('ip-adress').value;
-    geo_API_url = "https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_5XxBUSKU20isJKk8Ws16BnrKKGqLC&ipAddress=" + ipAdress;
+    geo_API_url = "https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_HGy8rJadbSa7uV5cJqQfzWfExoF1k&ipAddress=" + ipAdress;
     return geo_API_url;
 }
 
